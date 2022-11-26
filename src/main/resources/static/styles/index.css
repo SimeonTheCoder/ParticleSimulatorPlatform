@@ -1,0 +1,46 @@
+body{
+    background: #330000;
+}
+
+iframe{
+    position: absolute;
+    display: block;
+    width: 15%;
+    height: 98%;
+
+    transition: width 1s;
+
+    border: black;
+    border-radius: 40px;
+}
+
+iframe:hover{
+    width: 30%;
+
+    transition: width .5s;
+}
+
+#content{
+    display: inline-block;
+    position: relative;
+
+    left: 17%;
+
+    transition: left 1s;
+
+    color: white;
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+iframe:hover + #content{
+    left: 32%;
+
+    transition: left .5s;
+}
+
+#gradient {
+    background-image: linear-gradient(black, #330000);
+
+    border-radius: 40px;
+}
