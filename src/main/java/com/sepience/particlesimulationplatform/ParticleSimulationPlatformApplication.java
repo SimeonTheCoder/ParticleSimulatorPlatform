@@ -1,5 +1,7 @@
 package com.sepience.particlesimulationplatform;
 
+import com.sepience.particlesimulationplatform.entities.Simulation;
+import com.sepience.particlesimulationplatform.services.interfaces.SimulationService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+<iframe src="/menu.html"></iframe>
+
+<div id="content">
+    <h1><i>Библиотека симулации</i></h1>
+    <p>
+        Библиотека, съдържаща всички качени симулации
+    </p>
+
+    <table>
+        <tr>
+            <th>
+                Име
+            </th>
+            <th>
+                Качена от
+            </th>
+        </tr>
+        <tr th:each="sim : ${sims}">
+            <td th:text="*{sim.getName()}">
+            <td th:text="*{sim.getUploadedBy()}">
+            <td>
+                <button th:attr="onclick=|navigator.clipboard.writeText('*{sim.getData()}')|">💾</button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

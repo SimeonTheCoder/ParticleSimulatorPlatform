@@ -31,6 +31,13 @@ iframe:hover{
     color: white;
 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+
+    -webkit-box-sizing: border-box; /* Safari, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+
+    width: 70%;
 }
 
 iframe:hover + #content{
@@ -43,4 +50,20 @@ iframe:hover + #content{
     background-image: linear-gradient(black, #330000);
 
     border-radius: 40px;
+}
+
+input {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#upload-btn {
+    padding: 20px;
+    background-color: darkred;
+    color: white;
+    font-weight: 400;
+    font-size: 15pt;
+    border-color: white;
+    border-radius: 20px;
+    margin: 20px;
 }
