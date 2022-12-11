@@ -7,28 +7,30 @@
     <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
-    <iframe src="/menu.html"></iframe>
+<iframe src="/menu.html"></iframe>
 
-    <div id="content">
+<div id="content">
+    <form th:action="@{/upl}" method="post" enctype="multipart/form-data">
         <h1>Качете симулация</h1>
 
         <span>Име на симулацията:</span>
-        <input type="text">
+        <input type="text" class="file" name="name">
 
         <br>
 
         <span>Файл на симулацията:</span>
-        <input type="file">
+        <input type="file" class="file" name="file">
 
         <br>
 
         <span>Вашето име:</span>
-        <input type="text">
+        <input type="text" class="file" name="uname">
 
         <br>
         <br>
 
-        <input type="button" value="Качете симулацията!" id="upload-btn">
-    </div>
+        <input type="submit" class="file" value="Качете симулацията!" id="upload-btn">
+    </form>
+</div>
 </body>
 </html>

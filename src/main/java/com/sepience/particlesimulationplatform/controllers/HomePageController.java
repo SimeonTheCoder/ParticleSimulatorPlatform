@@ -1,12 +1,15 @@
 package com.sepience.particlesimulationplatform.controllers;
 
 import com.sepience.particlesimulationplatform.entities.Simulation;
+import com.sepience.particlesimulationplatform.entities.SimulationDto;
 import com.sepience.particlesimulationplatform.services.interfaces.SimulationService;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,5 +63,12 @@ public class HomePageController {
         modelAndView.setViewName("about.html");
 
         return modelAndView;
+    }
+
+    @PostMapping("/upl")
+    public String importData(SimulationDto simulation) throws IOException {
+        service.addSimulation(service.transform(simulation));
+
+        return "redirect:/simulations_library";
     }
 }

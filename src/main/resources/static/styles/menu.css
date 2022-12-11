@@ -23,7 +23,7 @@ li{
 }
 
 li:hover{
-    background-color: #330000;
+    background-color: #031226;
     color: white;
     
     width: 300px;
@@ -57,7 +57,7 @@ li:hover #a{
     visibility: visible;
     width: 200px;
 
-    background-color: #660033;
+    background-color: #072b73;
 }
 
 #a li{
@@ -76,7 +76,7 @@ li:hover #a{
 }
 
 #a li:hover{
-    background-color: darkred;
+    background-color: #031226;
     padding: 20px;
 
     transition: background-color .5s;
