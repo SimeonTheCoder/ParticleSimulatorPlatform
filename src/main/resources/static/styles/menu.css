@@ -9,7 +9,7 @@ nav{
 li{
     display: block;
     padding: 20px;
-    width: 100px;
+    width: 100%;
 
     background-color: black;
     color:white;
@@ -26,7 +26,7 @@ li:hover{
     background-color: #031226;
     color: white;
     
-    width: 300px;
+    width: 120%;
 
     padding: 20px;
 
@@ -55,13 +55,13 @@ li:hover #a{
     position: relative;
     display: inline-block;
     visibility: visible;
-    width: 200px;
+    width: 120%;
 
     background-color: #072b73;
 }
 
 #a li{
-    width: 200px;
+    width: 120%;
     padding: 0px;
 
     font-size: 12pt;
@@ -72,7 +72,7 @@ li:hover #a{
 
     transition: background-color 2s;
     transition: padding 2s;
-    transition: height .5;
+    transition: height .5s;
 }
 
 #a li:hover{
