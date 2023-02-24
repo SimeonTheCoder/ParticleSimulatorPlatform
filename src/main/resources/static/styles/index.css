@@ -1,41 +1,62 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+#global-grid-container {
     background: #031226;
+
+    display: grid;
+
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 95vh;
+
+    grid-template-areas: "menu main";
+
+    height: 100%;
 }
 
-iframe{
-    position: absolute;
-    display: block;
-    width: 15%;
-    height: 98%;
+nav{
+    padding: 20px;
 
-    transition: width 1s;
+    position: sticky;
+    top: 20px;
+
+    grid-area: menu;
+
+    object-fit: cover;
+
+    overflow: hidden;
+    overflow-x: hidden;
+
+    height: 700px;
+}
+
+iframe {
+    object-fit: cover;
+    overflow: hidden;
 
     border: black;
     border-radius: 40px;
+
+    width: 100%;
+    height: 98%;
 }
 
-iframe:hover{
-    width: 120%;
-
-    transition: width .5s;
+img {
+    border-radius: 30px;
+    max-height: 95%;
 }
-
-iframe:hover body{
-    grid-template-columns: 40% 60%;
-}
-
 
 #content{
     display: inline-block;
     position: relative;
 
-    left: 17%;
+    left: 5%;
 
     transition: left 1s;
 
     color: white;
 
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+
     font-size: medium;
 
     -webkit-box-sizing: border-box; /* Safari, other WebKit */
@@ -48,15 +69,9 @@ iframe:hover body{
 }
 
 iframe:hover + #content{
-    left: 32%;
+    left: 20%;
 
     transition: left .5s;
-}
-
-#gradient {
-    background-image: linear-gradient(black, #330000);
-
-    border-radius: 40px;
 }
 
 input {
@@ -66,8 +81,8 @@ input {
 
 #upload-btn {
     padding: 20px;
-    background-color: #205459;
-    color: white;
+    background-color: yellow;
+    color: black;
     font-weight: 400;
     font-size: 15pt;
     border-color: white;
@@ -83,7 +98,7 @@ th {
 
 td {
     padding: 15px;
-    background-color: #205459;
+    background-color: revert;
     border-radius: 10px;
     margin: 10px;
 }
@@ -93,8 +108,8 @@ table {
 }
 
 button {
-    background: #205459;
-    border: #205459;
+    background: transparent;
+    border: transparent;
     border-radius: 10px;
 
     font-size: 20pt;
@@ -138,27 +153,43 @@ button {
 }
 
 h1 {
+    text-align: center;
+
     font-size: 40px;
 }
 
 p {
     font-size: 20px;
+
+    text-align: justify;
 }
 
-iframe {
-    position: sticky;
-    top: 0px;
-
-    width: 100%;
-
-    grid-area: menu;
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
-body {
-    display: grid;
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
 
-    grid-template-columns: 20% 80%;
-    grid-template-rows: auto;
+/* Track */
+::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 10px;
+}
 
-    grid-template-areas: "menu main";
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #072b73;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: yellow;
 }

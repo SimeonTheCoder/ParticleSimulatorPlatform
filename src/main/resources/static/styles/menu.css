@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 body{
     background-color: black;
+
+    overflow: hidden;
 }
 
 nav{
     display: inline;
+}
+
+a {
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.5s;
 }
 
 li{
@@ -13,7 +25,8 @@ li{
 
     background-color: black;
     color:white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    font-family: 'Source Sans Pro';
     font-weight: 400;
     font-size: 14pt;
 
@@ -41,13 +54,14 @@ li:hover{
     top: 0px;
     height: 10px;
 
-    transition: height 2s;
+    transition: 2s;
 }
 
 #a:hover{
+    color: darkblue;
     height: 120px;
 
-    transition: height .5s;
+    transition: .5s;
 }
 
 
@@ -61,6 +75,8 @@ li:hover #a{
 }
 
 #a li{
+    color: white;
+
     width: 120%;
     padding: 0px;
 
@@ -70,19 +86,26 @@ li:hover #a{
     display: inline-block;
     white-space: nowrap;
 
-    transition: background-color 2s;
-    transition: padding 2s;
-    transition: height .5s;
+    text-decoration: none;
+
+    transition: 0.5s;
 }
 
 #a li:hover{
-    background-color: #031226;
+    background-color: yellow;
     padding: 20px;
 
-    transition: background-color .5s;
-    transition: padding .5s;
+    text-decoration: none;
 
-    transition: width .5s, background-color .5s, height .5s, padding .5s;
+    color: black;
+
+    transition: 0.5s;
+}
+
+.link:hover {
+    color: black;
+
+    transition: 0.5s;
 }
 
 #logo{

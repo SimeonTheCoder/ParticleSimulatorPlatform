@@ -7,30 +7,38 @@
     <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
-<iframe src="/menu.html"></iframe>
+    <video autoplay muted loop>
+        <source src="video/plexus.mp4">
+    </video>
 
-<div id="content">
-    <form th:action="@{/upl}" method="post" enctype="multipart/form-data">
-        <h1>Качете симулация</h1>
+    <div id="global-grid-container">
+        <nav>
+            <iframe src="/menu.html"></iframe>
+        </nav>
 
-        <span>Име на симулацията:</span>
-        <input type="text" class="file" name="name">
+        <div id="content">
+            <form th:action="@{/upl}" method="post" enctype="multipart/form-data">
+                <h1>Качете симулация</h1>
 
-        <br>
+                <span>Име на симулацията:</span>
+                <input type="text" class="file" name="name">
 
-        <span>Файл на симулацията:</span>
-        <input type="file" class="file" name="file">
+                <br>
 
-        <br>
+                <span>Файл на симулацията:</span>
+                <input type="file" class="file" name="file">
 
-        <span>Вашето име:</span>
-        <input type="text" class="file" name="uname">
+                <br>
 
-        <br>
-        <br>
+                <span>Вашето име:</span>
+                <input type="text" class="file" name="uname">
 
-        <input type="submit" class="file" value="Качете симулацията!" id="upload-btn">
-    </form>
-</div>
+                <br>
+                <br>
+
+                <input type="submit" class="file" value="Качете симулацията!" id="upload-btn">
+            </form>
+        </div>
+    </div>
 </body>
 </html>

@@ -9,34 +9,42 @@
     <link rel="stylesheet" href="/styles/index.css">
 </head>
 <body>
-<iframe src="/menu.html"></iframe>
+    <video autoplay muted loop>
+        <source src="video/plexus.mp4">
+    </video>
 
-<div id="content">
-    <h1><i>Библиотека симулации</i></h1>
-    <p>
-        Библиотека, съдържаща всички качени симулации
-    </p>
+    <div id="global-grid-container">
+        <nav>
+            <iframe src="/menu.html"></iframe>
+        </nav>
 
-    <table>
-        <tr>
-            <th>
-                Име
-            </th>
-            <th>
-                Качена от
-            </th>
-            <th>
-                Свалете
-            </th>
-        </tr>
-        <tr th:each="sim : ${sims}">
-            <td th:text="*{sim.getName()}">
-            <td th:text="*{sim.getUploadedBy()}">
-            <td>
-                <button th:attr="onclick=|navigator.clipboard.writeText('*{sim.getData()}')|">💾</button>
-            </td>
-        </tr>
-    </table>
-</div>
+        <div id="content">
+            <h1><i>Библиотека симулации</i></h1>
+            <p>
+                Библиотека, съдържаща всички качени симулации
+            </p>
+
+            <table>
+                <tr>
+                    <th>
+                        Име
+                    </th>
+                    <th>
+                        Качена от
+                    </th>
+                    <th>
+                        Свалете
+                    </th>
+                </tr>
+                <tr th:each="sim : ${sims}">
+                    <td th:text="*{sim.getName()}">
+                    <td th:text="*{sim.getUploadedBy()}">
+                    <td>
+                        <button th:attr="onclick=|navigator.clipboard.writeText('*{sim.getData()}')|">💾</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
